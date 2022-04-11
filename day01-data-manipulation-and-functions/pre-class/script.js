@@ -1,34 +1,52 @@
+//Default Template (Our First Program)
 var main = function (input) {
-  var myOutputValue = 'hello world';
+  var myOutputValue = `Hi! ${input}!`;
   return myOutputValue;
 };
 
-var greetingMain = function (input) {
-  // Attempt the Greeting Program exercise from the Our First Program module below with greetingMain as the main function.
-  var myOutputValue = 'hello world';
+//Greeting Program
+var greetingMain = function (name) {
+  var myOutputValue = `Hello ${name} ! Wow ${name} is a great name, reminds me of this movie star..`;
   return myOutputValue;
 };
 
-var metricMain = function (input) {
-  // Attempt the Metric Conversion Program exercise from the Our First Program module below with metricMain as the main function.
-  var myOutputValue = 'hello world';
-  return myOutputValue;
+//Metric Conversion
+var metricMain = function (distanceInKm) {
+  var distanceInMiles = 0.62 * distanceInKm;
+  return distanceInMiles;
 };
 
+//Using Helper Functions in Main Function
 var functionsExampleMain = function (input) {
-  // Attempt the Base: Run Example Code exercise from the Functions I module below with functionsExampleMain as the main function.
-  var myOutputValue = 'hello world';
+  var myOutputValue = `${input} km = ${metricMain(input)} miles`;
   return myOutputValue;
 };
 
-var trainSpeedMain = function (input) {
-  // Attempt the Comfortable: Train Speed exercise from the Functions I module below with trainSpeedMain as the main function.
-  var myOutputValue = 'hello world';
-  return myOutputValue;
+//Train 2 Speed Comfortable
+var trainSpeedMain = function (delayMin) {
+  var delayHr = delayMin / 60;
+  var distance = 400;
+  var tripTime = 2 - delayHr;
+  var speed = Math.round(distance / tripTime);
+
+  var result = `For delay of ${delayMin} minutes - Train 2's speed should be ${speed} km/hr to reach Tokyo in 2 hours`;
+  return result;
 };
 
-var clockMain = function (input) {
-  // Attempt the More Comfortable: Clock exercise from the Functions I module below with clockMain as the main function.
-  var myOutputValue = 'hello world';
+//Clock Angle More Comfortable
+var clockMain = function (min) {
+  //calcmin hand angle with 1 pm
+  var minReal = min % 60;
+  var anglePerMin = 6;
+  var angleMin = minReal * anglePerMin;
+
+  //calc hour hand angle from 1 pm
+  var hr = Math.floor(min / 60);
+  var anglePerHr = 30;
+  var angleHr = hr * anglePerHr;
+
+  var result = angleMin - angleHr;
+  var myOutputValue = `The angle b/w hr and min hand for ${min} minutes past 1 pm is ${result}
+  degrees`;
   return myOutputValue;
 };
