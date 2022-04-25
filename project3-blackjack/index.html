@@ -60,8 +60,17 @@ The <html> element is known as the root element of a HTML page. All other elemen
       </ul>
     </nav>
     <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
-    <h1 id="header">🚀 Basics Project 3: Blackjack 🚀</h1>
+    <h1 id="header">♥♦ Basics Project 3: Blackjack ♣♠</h1>
     <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
+    <div id="container">
+      <p><b>Welcome to VP's Blackjack Game</b></p>
+      <p>
+        <i
+          >Click Submit to play and never go back to your Xbox ever again
+          😛😛</i
+        >
+      </p>
+    </div>
     <div class="container">
       <!-- The <p> tag defines a paragraph element. -->
       <p>Input:</p>
@@ -85,12 +94,12 @@ The <html> element is known as the root element of a HTML page. All other elemen
       // When the submit button is clicked, access the text entered by the user in the input field
       // And pass it as an input parameter to the main function as defined in script.js
       button.addEventListener("click", function () {
-        // Set result to input value
+        // Access input box
         var input = document.querySelector("#input-field");
-        // Store the output of main() in a new variable
+        //Extract value inputted in input, hand it over to main, and store result in var result
         var result = main(input.value);
 
-        // Display result in output element
+        // Access output element and display result
         var output = document.querySelector("#output-div");
         output.innerHTML = result;
 
